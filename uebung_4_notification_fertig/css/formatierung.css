@@ -1,0 +1,76 @@
+/* V 1.00 vom 28.9.2020, CSS-Datei: Flex Responsive */
+body {
+  color: black;
+  font-family: Times, serif;
+  /*width: 80%;*/ /* wenn man zentrieren wollte 1/4 */
+  /*margin: auto;*/  /* wenn man zentrieren wollte 2/4 */
+}
+p {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+main {
+  /*text-align: center;*/  /* wenn man zentrieren wollte 3/4 */
+}
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*justify-content: center;*/  /* wenn man zentrieren wollte 4/4 */
+}
+article {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px;
+  max-width: 640px;
+  margin-right: 8px;
+  background-color: antiquewhite;
+  padding: 8px;
+  /* Gesamtbreite Box = width */
+  box-sizing: border-box;
+}
+div {
+  width: 50%;
+}
+div:first-child {
+  margin-right: 20px;
+}
+h3 {
+  margin-top: 0;
+}
+img {
+  width: 100%;
+  max-width: 302px;
+  vertical-align: middle;
+}
+img.teaser {
+  width: 100%;
+  max-width: 640px;
+}
+/* Install prompt */
+.banner {
+  align-content: center;
+  display: none;
+  justify-content: center;
+  width: 100%;
+}
+.versteckt {
+	display: none;
+}
+ 
+
+#messagesPush {
+	display: none;
+}
+/* Stylesheet PWA-builder, siehe https://github.com/pwa-builder/pwa-install */
+/* pwa-install::part(openButton) {
+  background: green;
+} */
+
+/* Inhalte vertikal, horizontal zentrieren */
+/*
+article {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+*/

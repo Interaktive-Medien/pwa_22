@@ -1,0 +1,17 @@
+/* CSS Document */
+body {
+	font-family: sans_serif;
+}
+section {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+article {
+	width: 30%;
+	margin: 10px;
+}
+@media only screen and (max-width: 600px) {
+	section {display: inherit;}
+	article {width: 100%;}
+}

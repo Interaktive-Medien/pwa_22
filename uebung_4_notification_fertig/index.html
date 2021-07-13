@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="de">
+<!-- PWA -->
+<!-- v1 vom 1.7.2021 -->
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Tages Anzeiger News vom 28. April 2019">
+	
+	
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="400700032841-hrj3govn5d2gcn5dc2r9261n8skufps5.apps.googleusercontent.com">
+
+	
+	
+	<!-- #3: Hintergrundfarbe für iOS -->
+		<meta name="theme-color" content="#FF9800">
+	<!-- Ende #3: Hintergrundfarbe für iOS -->
+	<title>Push PWA Beispiel</title>
+	<link href="css/formatierung.css" rel="stylesheet" type="text/css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+  <!-- #1: Manifest. Dieses muss in der Root liegen -->
+		<link rel="manifest" href="manifest.json">
+  <!-- Ende #1: Manifest -->
+
+  <!-- #4: Home Screen für iOS-->
+    <!-- für iOS, welches Manifest nicht unterstützt, https://webkit.org/status/#?search=manifest -->
+		<link rel="icon" sizes="128x128" href="icons/hello-icon-128.png">
+		<link rel="apple-touch-icon" sizes="128x128" href="icons/hello-icon-128.png">
+		<link rel="icon" sizes="192x192" href="/icons/hello-icon-192.png">
+		<link rel="apple-touch-icon" sizes="192x192" href="icons/hello-icon-192.png">
+		<link rel="icon" sizes="256x256" href="icons/hello-icon-256.png">
+		<link rel="apple-touch-icon" sizes="256x256" href="/icons/hello-icon-256.png">
+		<link rel="icon" sizes="512x512" href="icons/hello-icon-512.png">
+		<link rel="apple-touch-icon" sizes="512x512" href="icons/hello-icon-512.png">
+  <!-- Ende #4: Home Screen für iOS-->
+
+	<!-- #2: Service-Worker Registrierung für Advanced Caching -->
+	<script type="module">
+		import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+		const el = document.createElement('pwa-update');
+		document.body.appendChild(el);
+	</script>
+	<!-- Ende #2: Service-Worker Registrierung für Advanced Caching -->
+
+	<!-- #5: Skript für Install-Button --><!-- https://components.pwabuilder.com/component/install_pwa -->
+		<script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
+	<!-- #5: Ende Skript für Install-Button -->
+	
+	<!-- #7: Skript für Update-Info --><!-- https://github.com/pwa-builder/pwa-update -->
+		<script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate"></script>
+	<!-- Ende #7: Skript für Update-Info -->
+</head>
+<body><!-- https://www.tagesanzeiger.ch/kultur/ vom 28.4.2019 -->
+	<!-- #6: Ort des Install-Buttons -->
+		<pwa-install>Installieren</pwa-install>
+	<!-- Ende #6: Ort des Install-Buttons -->
+	
+	<!-- #8: Ort der Update-Info -->
+		<pwa-update></pwa-update>
+	<!-- Ende #8: Ort der Update-Info -->
+	
+	<!-- #9: Testen der Push-Lösung -->
+
+
+	<div id="messagesXPush">
+		<div id="token"></div>
+        <div id="msg"></div>
+        <div id="notis"></div>
+        <div id="err"></div>
+	</div>	
+	
+		<!-- <p><div class="g-signin2" data-onsuccess="onSignIn"></div></p> -->
+	<!-- Ende #9: Testen der Push-Lösung -->
+	<main>
+		<h2>«Wo beginnt die Diktatur?»</h2>
+		<p><img class="teaser" src="img/teaser.jpg" alt="Sibylle Berg"></p>
+		<p>Der neue Roman der Wahlschweizerin Sibylle Berg hält der Gegenwart den Spiegel vor!</p>
+	</main>
+	<section>
+		<h2 class="versteckt">News</h2>
+		<article>
+			<div>
+				<img src="img/01.jpg" alt="Yishai Sarid">
+			</div>
+			<div>
+				<h3>«Wärt ihr desertiert?»</h3>
+				<p>Yishai Sarids grossartiger Roman «Monster» erinnert daran, dass zum Umgang mit dem Holocaust von Anfang an der Widerspruch zwischen Abstraktion und Genauigkeit gehört hat. Mehr…</p>
+			</div>
+		</article>
+		<article>
+			<div>
+				<img src="img/02.jpg" alt="Martin Ebel">
+			</div>
+			<div>
+				<h3>Was heisst eigentlich… «amigs»?</h3>
+				<p>Video Martin Ebel wundert sich über ein Mundartwort, das auch viele Schweizer nicht erklären können. Mehr…</p>
+			</div>
+		</article>
+		<article>
+			<div>
+				<img src="img/03.jpg" alt="Jan Philipp Gloger">
+			</div>
+			<div>
+				<h3>Integration hat auch komische Seiten</h3>
+				<p>Der deutsche Regisseur Jan Philipp Gloger hat einst in Zürich studiert. Nun inszeniert er Opernhaus Rossinis «Il turco in Italia». Mehr…</p>
+			</div>
+		</article>
+		<article>
+			<div>
+				<img src="img/04.jpg" alt="Operation Tiger">
+			</div>
+			<div>
+				<h3>Ein Übungsmanöver mit 749 Toten?</h3>
+				<p>History Reloaded Dass die harmlose «Operation Tiger» bei Slapton Sands blutig endete, blieb lange geheim – bis ein Hobbyforscher Spuren fand. Zum Blog</p>
+			</div>
+		</article>
+		<article>
+			<div>
+				<img src="img/05.jpg" alt="Peter Frankopan">
+			</div>
+			<div>
+				<h3>Wenn Eselshäute knapp werden</h3>
+				<p>Oxford-Professor Peter Frankopan beurteilt die Folgen der chinesischen Seidenstrassen-Initiative für die Machtverhältnisse in der Welt. Der Westen, meint er, hat keine Strategie. Mehr…</p>
+			</div>
+		</article>
+		<article>
+			<div>
+				<img src="img/06.jpg" alt="Widmerzeile">
+			</div>
+			<div>
+				<h3>Was sagt die Biene zum Honig?</h3>
+				<p>Die neue Widmerzeile ist da. Legen Sie der Biene etwas Süsses in den Mund! Mehr…</p>
+			</div>
+		</article>
+		<article>
+			<div>
+				<img src="img/07.jpg" alt="Anna Todd">
+			</div>
+			<div>
+				<h3>Liebe Studentin, schlimmer Finger</h3>
+				<p>Anna Todd schreibt, was Millionen lesen wollen: Erotik, klare Rollen. Nun ist ihre Tessa-Story im Schweizer Kino. Mehr…</p>
+			</div>
+		</article>
+		<article>
+			<div>
+				<img src="img/08.jpg" alt="Hollywood">
+			</div>
+			<div>
+				<h3>Aufstand in Hollywood</h3>
+				<p>Zwischen Drehbuchautoren und den vier grossen Künstleragenturen tobt eine Schlacht. Studios fürchten um ihre Produktionen. Mehr…</p>
+			</div>
+		</article>
+		<article>
+			<div>
+				<img src="img/09.jpg" alt="Rod Steward">
+			</div>
+			<div>
+				<h3>«Ich schulde der schwarzen Kultur etwas»</h3>
+				<p>Haare, Sex, Drogenexzesse: Er bereut nichts. Rod Stewart will singen, bis er ins Grab fällt. Mehr…</p>
+			</div>
+		</article>
+		<article>
+			<div>
+				<img src="img/10.jpg" alt="Schweizer Filme">
+			</div>
+			<div>
+				<h3>Produzenten fordern 20-Prozent-Quote für Schweizer Filme</h3>
+				<p>Auch Schweizer Produzenten wollen vom Streamingboom profitieren und für Netflix und andere Anbieter Stoffe entwickeln. Mehr…</p>
+			</div>
+		</article>
+		<article>
+			<div>
+				<img src="img/11.jpg" alt="Linda Vogel">
+			</div>
+			<div>
+				<h3>Abseits des Märchenwaldes</h3>
+				<p>Die Harfenistin und Sängerin Linda Vogel veröffentlicht ihr einnehmendes Debütalbum «Maps to Others», auf dem die Zürcherin neue Klänge in ihrem Instrument findet. Mehr…</p>
+			</div>
+		</article>
+		<article>
+			<div>
+				<img src="img/12.jpg" alt="Klimawelle">
+			</div>
+			<div>
+				<h3>«Klima und Frauen, darum gehts jetzt»</h3>
+				<p>Die Grünen surfen auf der Klimawelle. Jetzt müsse die Partei alte Fehler vermeiden, sagt Jo Lang, einer der bekanntesten Grünen im Land. Mehr…</p>
+			</div>
+		</article>
+		<article>
+			<div>
+				<img src="img/13.jpg" alt="Salvator Mundi">
+			</div>
+			<div>
+				<h3>Für 450 Millionen Dollar ersteigert – und seither verschwunden</h3>
+				<p>Da Vincis «Salvator Mundi» ist das teuerste Gemälde der Welt. Doch wo ist es? Die mysteriöse Spur führt zu einem Prinzen. Und vielleicht bald nach Paris. Mehr…</p>
+			</div>
+		</article>
+	</section>
+	<!-- #10: Push-Skript: Zugriff auf Firebase -->
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-messaging.js"></script>
+	<!-- Ende #10: Push-Skript: zugriff auf Firebase -->
+
+	<!-- #11: Push-Skript: Notification -->
+	<script>
+		// Folgt folgendem Tutoral:
+		// https://www.itwonders-web.com/blog/push-notification-using-firebase-demo-tutorial
+		// WICHTIG: es braucht die Datei firebase-messaging-sw.js, 
+		// welche in der Root (d.h. Ordner web) des Servers liegen muss (also nicht im einnen Unterverzeichnis)
+		
+		MsgElem = document.getElementById('msg');
+        TokenElem = document.getElementById('token');
+        NotisElem = document.getElementById('notis');
+        ErrElem = document.getElementById('err');
+		
+		// Your web app's Firebase configuration; muss auch in firebase-messaging-sw.js angepasst werden
+		var firebaseConfig = {
+			apiKey: "AIzaSyBDLy2S0CVcYgMe8jpaIuTuw8qFOY9c7xY",
+			authDomain: "pwa-notification-imv.firebaseapp.com",
+			projectId: "pwa-notification-imv",
+			storageBucket: "pwa-notification-imv.appspot.com",
+			messagingSenderId: "490824365455",
+			appId: "1:490824365455:web:48e1d8f6a6119893d707fa"
+	  	};
+		
+	  // Initialize Firebase
+		if (!firebase.apps.length) {
+			firebase.initializeApp(firebaseConfig);
+		} else {
+			firebase.app(); // if already initialized, use that one
+		}
+			
+        const messaging = firebase.messaging();
+        messaging
+            .requestPermission()
+            .then(function () {
+                MsgElem.innerHTML = 'Notification permission granted.';
+                console.log('Notification permission granted.');
+
+                // get the token in the form of promise
+                return messaging.getToken();
+            })
+            .then(function (token) {
+                TokenElem.innerHTML = 'Device token is : <br>' + token;
+            })
+            .catch(function (err) {
+                ErrElem.innerHTML = ErrElem.innerHTML + '; ' + err;
+                console.log('Unable to get permission to notify.', err);
+            });
+
+        let enableForegroundNotification = true;
+        messaging.onMessage(function (payload) {
+            console.log('Message received. ', payload);
+            NotisElem.innerHTML =
+                NotisElem.innerHTML + JSON.stringify(payload);
+
+            if (enableForegroundNotification) {
+                let notification = payload.notification;
+                navigator.serviceWorker
+                    .getRegistrations()
+                    .then((registration) => {
+                        registration[0].showNotification(notification.title);
+                    });
+            }
+        });		
+	</script>
+	<!-- Ende #11: Push-Skript: Notification -->
+</body>
+</html>

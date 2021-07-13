@@ -1,0 +1,68 @@
+{
+  "dir": "ltr",
+  "lang": "de",
+  "name": "PWA Pokemon mit DB",
+  "short_name": "Pokomon PWA",
+  "scope": "/uebung_3_db_fertig/",
+  "display": "fullscreen",
+  "start_url": "https://537449-52.web1.fh-htwchur.ch/uebung_3_db_fertig/index.php",
+  "background_color": "#FF9800",
+  "theme_color": "#FF9800",
+  "description": "Auflistung aler Pokemon",
+  "orientation": "any",
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "screenshots": [
+  	{
+    	"src": "screenshots/screenshot_desktop.png",
+    	"sizes": "1300x862",
+		  "type": "image/png"
+	 },
+	 {
+    	"src": "screenshots/screenshot_mobile.png",
+    	"sizes": "360x589",
+		  "type": "image/png"
+	 }
+  ],
+  "icons": [
+   {
+     "src": "icons/maskable_icon.png",
+     "sizes": "192x192",
+     "type": "image/png",
+	    "purpose": "maskable"
+   },
+   {
+      "src": "favicon.ico",
+      "sizes": "48x48 32x32 16x16"
+   },
+   {
+      "src": "favicon.ico",
+      "sizes": "48x48 32x32 16x16"
+   },
+   {
+    "src": "icons/hello-icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+   },
+   {
+      "src": "icons/hello-icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+   },
+   {
+      "src": "icons/hello-icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+   },
+   {
+      "src": "icons/hello-icon-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+   },
+   {
+      "src": "icons/hello-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+   }
+  ]
+}
