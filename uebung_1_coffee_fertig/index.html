@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<!-- https://www.freecodecamp.org/news/build-a-pwa-from-scratch-with-html-css-and-javascript/ -->
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Long live coffee. Life begins after coffee">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<!-- Hintergrundfarbe für iOS -->
+		<meta name="theme-color" content="#db4938">
+    <link rel="stylesheet" href="css/style.css">
+	<!-- Manifest. Dieses muss in der Root liegen -->
+		<link rel="manifest" href="manifest.json">
+   <!-- Ende Manifest -->
+   <!-- Home Screen für iOS-->
+		<link rel="apple-touch-icon" href="icons/icon-72x72.png">
+		<link rel="apple-touch-icon" href="icons/icon-96x96.png">
+		<link rel="apple-touch-icon" href="icons/icon-128x128.png">
+		<link rel="apple-touch-icon" href="icons/icon-144x144.png">
+		<link rel="apple-touch-icon" href="icons/icon-152x152.png">
+		<link rel="apple-touch-icon" href="icons/icon-192x192.png">
+		<link rel="apple-touch-icon" href="icons/icon-384x384.png">
+		<link rel="apple-touch-icon" href="icons/icon-512x512.png">
+	<!-- Ende Home Screen für iOS-->
+	<!-- Service-Worker Registrierung für Advanced Caching -->
+		<script type="module">
+			import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+			const el = document.createElement('pwa-update');
+			document.body.appendChild(el);
+		</script>
+	<!-- Ende Service-Worker Registrierung für Advanced Caching -->
+	<!-- Skript für Install-Button --><!-- https://components.pwabuilder.com/component/install_pwa -->
+		<script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
+	<!-- Ende Skript für Install-Button -->
+    <title>Coffee PWA</title>
+  </head>
+  <body>
+	<!-- Ort des Install-Buttons -->
+		<pwa-install>Installieren</pwa-install>
+	<!-- Ende Ort des Install-Buttons -->
+    <main>
+      <nav>
+        <h1>Coffee</h1>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Blog</li>
+        </ul>
+      </nav>
+      <div class="container"></div>
+    </main>
+    <script src="js/ladeBilder.js"></script>
+  </body>
+</html>

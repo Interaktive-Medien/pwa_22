@@ -5,7 +5,7 @@
   "short_name": "Beispiel PWA",
   "scope": "/im5/pwa/beispiel_fertig/",
   "display": "fullscreen",
-  "start_url": "XXXXX.web1.fh-htwchur.ch/im5/pwa/beispiel_fertig/index.html",
+  "start_url": "https://XXXXX.web1.fh-htwchur.ch/im5/pwa/beispiel_fertig/index.html",
   "background_color": "#FF9800",
   "theme_color": "#FF9800",
   "description": "Tages Anzeiger News vom 28. April 2019",
