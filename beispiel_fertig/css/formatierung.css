@@ -1,4 +1,4 @@
-/* V 1.00 vom 28.9.2020, CSS-Datei: Flex Responsive */
+/* V 1.00 vom 1.7.2021, CSS-Datei: Flex Responsive */
 body {
   color: black;
   font-family: Times, serif;
@@ -61,7 +61,6 @@ img.teaser {
 /* pwa-install::part(openButton) {
   background: green;
 } */
-
 /* Inhalte vertikal, horizontal zentrieren */
 /*
 article {
