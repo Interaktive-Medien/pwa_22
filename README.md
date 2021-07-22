@@ -1,5 +1,9 @@
 # Progressive Web-Apps
-Repository für den Progressive Web-App Code im Grundast der Interaktiven Medien
+Repository für den Progressive Web-App Code im Grundast der Interaktiven Medien. 
+Progressive Web-Apps (PWA) sind normale Websites basierend auf HTML, CSS, Javascript, MySQL und PHP. Die Websites sind angereichert durch die Möglichkeit, dass sie auf dem Smartphone (oder Desktop) installiert werden können. Dabei werden die Inhalte (wie Bilder, Stylesheet etc.) auch lokal gespeichert. Das heisst, die PWA können auch offline (d.h. ohne Internetverbindung) genutzt werden.
+## Zentrale Komponenten
+- Um Progressive Web-Apps auf einem Endgerät zu installieren wird eine manifest.json-Datei benötigt, die im head-Bereich der Startseite der PWA verlinkt sein muss. Die Manifest-Datei enthält alle Informationen über die App, die benötigt werden, um die PWA erfolgreich zu installieren. Dazu gehören Name, App-Icons und der Pfad zur Startdatei der PWA.
+- Ein Service-Worker ist JavaScript-Code, der separat vom Browser im Hintergrund ausgeführt werden kann. Es handelt sich im Wesentlichen um eine JavaScript-Datei, die separat vom Hauptbrowser-Thread ausgeführt wird, Netzwerkanforderungen abfängt, Ressourcen zwischenspeichert oder aus dem Cache abruft und Push-Nachrichten übermittelt. Da Worker getrennt vom Hauptthread ausgeführt werden, sind Service-Worker unabhängig von der Anwendung, der sie zugeordnet sind. Die wesentlichen Elemente des Service-Workers sind bei <a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/destination" target="_blank">Mozilla</a> beschrieben.
 ## Ordner «beispiel»
 Dieser Ordner ist die Ausgangslage für das Selbststudium. Es handelt sich um eine validierte, responsive Website. Sie muss im Selbststudium in eine PWA umgewandelt werden. Zu Anschaungszwecken steht die Ausgangslage auch <a href="https://537449-52.web1.fh-htwchur.ch/beispiel/" target="_blank">im Netz</a> zur Verfügung.
 ## Ordner «beispiel_fertig»
