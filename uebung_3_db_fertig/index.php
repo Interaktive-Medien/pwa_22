@@ -7,11 +7,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Darstellung aller Pokemon">
 	<!-- #3: Hintergrundfarbe für iOS -->
-		<meta name="theme-color" content="#FF9800">
+	<meta name="theme-color" content="#FF9800">
 	<!-- Ende #3: Hintergrundfarbe für iOS -->
-  <!-- #1: Manifest. Dieses muss in der Root liegen -->
-   <link rel="manifest" href="manifest.json">
- <!-- Ende #1: Manifest -->
+    <!-- #1: Manifest. Dieses muss in der Root liegen -->
+   		<link rel="manifest" href="manifest.json">
+ 	<!-- Ende #1: Manifest -->
 
  <!-- #4: Home Screen für iOS-->
    <!-- für iOS, welches Manifest nicht unterstützt, https://webkit.org/status/#?search=manifest -->

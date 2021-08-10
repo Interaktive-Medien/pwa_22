@@ -18,3 +18,8 @@ Dieser Ordner ist das fertig umgewandelte PWA. Zu Anschaungszwecken steht die L�
 In der zweiten Übung innerhalb der <b>Blockwoche</b> soll zuerst eine einfache Website mit Flexboxen gebaut werden. Die Inhalte stammen aus einer gegebenen JSON-Datei. Anschliessend wird das PWA eingebaut.
 ## Ordner «uebung_2_json_fertig»
 Dieser Ordner ist das fertig umgewandelte PWA. Zu Anschaungszwecken steht die Lösung auch <a href="https://537449-52.web1.fh-htwchur.ch/uebung_2_json_fertig/" target="_blank">im Netz</a> zur Verfügung.
+## Ordner «uebung_3_db»
+In der dritten Übung innerhalb der <b>Blockwoche</b> greifen wir auf eine Datenbank zu. Die Datei <i>Datenbank_pokemon.sql</i> beinhaltet die zu importierenden Daten.<br>
+Das Vorgehen ist identisch mit dem Beispiel <a href="https://github.com/WolfgangBock/backend_technologien" target="_blank">«finale_Version_ausfuehrlich_kommentiert»</a> des 3. Semesters. Machen Sie sich zuerst wieder mit dem Zusammenspiel der Dateien und Funktionen vertraut. Anschliessend löschen Sie alle überflüssigen Dateien und Funktionen. Es werden nur Inhalte der Datenbank angezeigt. Funktionen für Buttons, das Login, Hinzufügen, Bearbeiten und Löschen von Datensätzen braucht es nicht. Es sollen nur Datensätze angezeigt werden.
+## Ordner «uebung_3_db_fertig»
+Dieser Ordner ist das fertig umgewandelte PWA. Zu Anschaungszwecken steht die Lösung auch <a href="https://537449-52.web1.fh-htwchur.ch/uebung_3_db_fertig/" target="_blank">im Netz</a> zur Verfügung.
