@@ -23,3 +23,8 @@ In der dritten Übung innerhalb der <b>Blockwoche</b> greifen wir auf eine Daten
 Das Vorgehen ist identisch mit dem Beispiel <a href="https://github.com/WolfgangBock/backend_technologien" target="_blank">«finale_Version_ausfuehrlich_kommentiert»</a> des 3. Semesters. Machen Sie sich zuerst wieder mit dem Zusammenspiel der Dateien und Funktionen vertraut. Anschliessend löschen Sie alle überflüssigen Dateien und Funktionen. Es werden nur Inhalte der Datenbank angezeigt. Funktionen für Buttons, das Login, Hinzufügen, Bearbeiten und Löschen von Datensätzen braucht es nicht. Es sollen nur Datensätze angezeigt werden.
 ## Ordner «uebung_3_db_fertig»
 Dieser Ordner ist das fertig umgewandelte PWA der Datenbank. Zu Anschaungszwecken steht die Lösung auch <a href="https://537449-52.web1.fh-htwchur.ch/uebung_3_db_fertig/" target="_blank">im Netz</a> zur Verfügung.
+## Ordner «uebung_4_notification»
+In der vierten Übung innerhalb der <b>Blockwoche</b> experimentieren wir mit Push-Nachrichten. Die Unterlagen sind eine visuelle Zusammenfassung des <a href="https://www.itwonders-web.com/blog/push-notification-using-firebase-demo-tutorial#update-on-2020-03-15" target="_blank">Tutorial: Web Push notification using Firebase.</a><br>
+Das Beispiel basiert auf der ersten, fertigen <a href="https://537449-52.web1.fh-htwchur.ch/beispiel_fertig/" target="_blank">PWA-Übung</a>.
+## Ordner «uebung_4_notification_fertig»
+Dieser Ordner ist das fertig umgewandelte PWA der Datenbank. Zu Anschaungszwecken steht die Lösung auch <a href="https://537449-52.web1.fh-htwchur.ch/uebung_4_notification_fertig/" target="_blank">im Netz</a> zur Verfügung.

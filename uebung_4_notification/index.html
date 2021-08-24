@@ -45,12 +45,7 @@
 	<pwa-install>Installieren</pwa-install>
 	<!-- Ende #6: Ort des Install-Buttons -->
     <!-- #7: Notifications-Meldungen darstellen -->
-	<div id="messagesPush">
-        <div id="token"></div>
-        <div id="msg"></div>
-        <div id="notis"></div>
-        <div id="err"></div>
-	</div>
+ 
     <!-- Ende #7: Notifications-Meldungen darstellen -->
 	<main>
 	  <h2>«Notification-Diktatur?»</h2>
@@ -151,78 +146,17 @@
 		</div>
 	  </article>
 	</section>
-        <!-- #9: Firebase initialisieren -->
-        <!-- gemäss Tutorial Step 2: Getting your Project & Web App Credentials Info, Punkt 4 -->
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-messaging.js"></script>
+    <!-- #9: Firebase initialisieren -->
 
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#available-libraries -->
-
-        <script>
-          // Your web app's Firebase configuration
-          // Anpassen!!
-        var firebaseConfig = {
-            apiKey: "YOUR_API_KEY",
-            authDomain: "YOUR_FIREBASAPP",
-            projectId: "YOUR_PROJECT_ID",
-            storageBucket: "YOUR_APPSPOT",
-            messagingSenderId: "YOUR-SENDER-ID",
-            appId: "YOUR_APP_ID"
-          };
-
-
-          // Initialize Firebase
-          firebase.initializeApp(firebaseConfig);
-        </script>
     <!-- Ende #9: Firebase initialisieren -->
     
     <!-- #8: Push-Skript: Notification -->
-    <script>
-       MsgElem = document.getElementById("msg");
-       TokenElem = document.getElementById("token");
-       NotisElem = document.getElementById("notis");
-       ErrElem = document.getElementById("err");
-    </script>
+
     <!-- Ende #8: Push-Skript: Notification -->
     
     <!-- #10: Requesting Permission -->
     <script>
-        const messaging = firebase.messaging();
-         messaging
-           .requestPermission()
-           .then(function () {
-             MsgElem.innerHTML = "Notification permission granted." 
-             console.log("Notification permission granted.");
-
-             // get the token in the form of promise
-             return messaging.getToken()
-           })
-           .then(function(token) {
-             // print the token on the HTML page
-             TokenElem.innerHTML = "Device token is : <br>" + token
-           })
-           .catch(function (err) {
-           ErrElem.innerHTML = ErrElem.innerHTML + "; " + err
-           console.log("Unable to get permission to notify.", err);
-         });
-		
-		let enableForegroundNotification = true;
-        messaging.onMessage(function (payload) {
-            console.log('Message received. ', payload);
-            NotisElem.innerHTML =
-                NotisElem.innerHTML + JSON.stringify(payload);
-
-            if (enableForegroundNotification) {
-                let notification = payload.notification;
-                navigator.serviceWorker
-                    .getRegistrations()
-                    .then((registration) => {
-                        registration[0].showNotification(notification.title);
-                    });
-            }
-        });	
+        
     </script>
     <!-- Ende #10: Requesting Permission -->
 </body>

@@ -6,6 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Darstellung aller Pokemon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<!-- #3: Hintergrundfarbe für iOS -->
 	<meta name="theme-color" content="#FF9800">
 	<!-- Ende #3: Hintergrundfarbe für iOS -->
@@ -36,7 +37,7 @@
  <!-- #5: Skript für Install-Button --><!-- https://components.pwabuilder.com/component/install_pwa -->
    <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
  <!-- #5: Ende Skript für Install-Button -->
-  <title>PWA FDB Pokemon</title>
+  <title>PWA DB Pokemon</title>
   <link rel="stylesheet" href="css/style.css" >
 </head>
 <body>
