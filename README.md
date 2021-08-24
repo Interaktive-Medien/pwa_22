@@ -27,4 +27,4 @@ Dieser Ordner ist das fertig umgewandelte PWA der Datenbank. Zu Anschaungszwecke
 In der vierten Übung innerhalb der <b>Blockwoche</b> experimentieren wir mit Push-Nachrichten. Die Unterlagen sind eine visuelle Zusammenfassung des <a href="https://www.itwonders-web.com/blog/push-notification-using-firebase-demo-tutorial#update-on-2020-03-15" target="_blank">Tutorial: Web Push notification using Firebase.</a><br>
 Das Beispiel basiert auf der ersten, fertigen <a href="https://537449-52.web1.fh-htwchur.ch/beispiel_fertig/" target="_blank">PWA-Übung</a>.
 ## Ordner «uebung_4_notification_fertig»
-Dieser Ordner ist das fertig umgewandelte PWA der Datenbank. Zu Anschaungszwecken steht die Lösung auch <a href="https://537449-52.web1.fh-htwchur.ch/uebung_4_notification_fertig/" target="_blank">im Netz</a> zur Verfügung.
+Dieser Ordner ist das fertige Push-Nachrichten-Beispiel. Allerdings fehlen die individuellen Parameter von Firebase. Diese müssen laut Tutorial erstellt werden. Zu Anschaungszwecken steht die Lösung auch <a href="https://537449-52.web1.fh-htwchur.ch/uebung_4_notification_fertig/" target="_blank">im Netz</a> zur Verfügung.
