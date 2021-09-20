@@ -15,12 +15,12 @@
   "screenshots": [
   	{
     	"src": "screenshots/screenshot_desktop.png",
-    	"sizes": "1300x862",
+    	"sizes": "2379x1441",
 		  "type": "image/png"
 	 },
 	 {
     	"src": "screenshots/screenshot_mobile.png",
-    	"sizes": "360x589",
+    	"sizes": "568x773",
 		  "type": "image/png"
 	 }
   ],
@@ -33,11 +33,7 @@
    },
    {
       "src": "favicon.ico",
-      "sizes": "48x48 32x32 16x16"
-   },
-   {
-      "src": "favicon.ico",
-      "sizes": "48x48 32x32 16x16"
+      "sizes": "48x48"
    },
    {
     "src": "icons/hello-icon-128.png",
