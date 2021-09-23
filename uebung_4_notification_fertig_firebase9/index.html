@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="de">
+<!-- PWA -->
+<!-- v1 vom 23.8.2021 -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Notification PWA">
+	<title>PWA Notification</title>
+	<link href="css/formatierung.css" rel="stylesheet" type="text/css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<meta name="theme-color" content="#FF9800">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+	<!-- #1: Manifest. Dieses muss in der Root liegen -->
+		<link rel="manifest" href="manifest.json">
+	<!-- Ende #1: Manifest -->
+
+	<!-- #4: Home Screen für iOS--><!-- für iOS, welches Manifest nicht unterstützt, https://webkit.org/status/#?search=manifest -->
+	    <link rel="icon" sizes="128x128" href="images/128x128.png">
+	    <link rel="apple-touch-icon" sizes="128x128" href="images/128x128.png">
+	    <link rel="icon" sizes="192x192" href="images/192x192.png">
+	    <link rel="apple-touch-icon" sizes="192x192" href="images/192x192.png">
+	    <link rel="icon" sizes="256x256" href="images/256x256.png">
+	    <link rel="apple-touch-icon" sizes="256x256" href="images/256x256.png">
+	    <link rel="icon" sizes="512x512" href="images/512x512.png">
+	    <link rel="apple-touch-icon" sizes="512x512" href="images/512x512.png">
+	<!-- Ende #4: Home Screen für iOS-->
+
+	<!-- #2 und #3: Service-Worker Registrierung für Advanced Caching -->
+	<script type="module">
+		import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+		const el = document.createElement('pwa-update');
+		document.body.appendChild(el);
+</script>
+	<!-- Ende #2 und #3: Service-Worker Registrierung für Advanced Caching -->
+
+	<!-- #5: Skript für Install-Button --><!-- https://components.pwabuilder.com/component/install_pwa -->
+		<script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
+	<!-- #5: Ende Skript für Install-Button -->
+</head>
+<body><!-- https://www.tagesanzeiger.ch/kultur/ vom 28.4.2019 -->
+	<!-- #6: Ort des Install-Buttons -->
+	<pwa-install>Installieren</pwa-install>
+	<!-- Ende #6: Ort des Install-Buttons -->
+    <!-- #7: Notifications-Meldungen darstellen -->
+
+		<div id="messagesPush">
+			<div id="token"></div>
+			<div id="msg"></div>
+			<div id="notis"></div>
+			<div id="err"></div>
+		</div>
+
+
+
+    <!-- Ende #7: Notifications-Meldungen darstellen -->
+	<main>
+	  <h2>«Notification-Diktatur?»</h2>
+	  <p><img class="teaser" src="img/teaser.jpg" alt="Sibylle Berg"></p>
+	  <p>Der neue Roman der Wahlschweizerin Sibylle Berg hält der Gegenwart den Spiegel vor.</p>
+	</main>
+	<section>
+	  <h2 class="versteckt">News</h2>
+	  <article>
+		<div> <img src="img/01.jpg" alt="Yishai Sarid"> </div>
+		<div>
+		  <h3>«Wärt ihr desertiert?»</h3>
+		  <p>Yishai Sarids grossartiger Roman «Monster» erinnert daran, dass zum Umgang mit dem Holocaust von Anfang an der Widerspruch zwischen Abstraktion und Genauigkeit gehört hat. Mehr…</p>
+		</div>
+	  </article>
+	  <article>
+		<div> <img src="img/02.jpg" alt="Martin Ebel"> </div>
+		<div>
+		  <h3>Was heisst eigentlich… «amigs»?</h3>
+		  <p>Video Martin Ebel wundert sich über ein Mundartwort, das auch viele Schweizer nicht erklären können. Mehr…</p>
+		</div>
+	  </article>
+	  <article>
+		<div> <img src="img/03.jpg" alt="Jan Philipp Gloger"> </div>
+		<div>
+		  <h3>Integration hat auch komische Seiten</h3>
+		  <p>Der deutsche Regisseur Jan Philipp Gloger hat einst in Zürich studiert. Nun inszeniert er Opernhaus Rossinis «Il turco in Italia». Mehr…</p>
+		</div>
+	  </article>
+	  <article>
+		<div> <img src="img/04.jpg" alt="Operation Tiger"> </div>
+		<div>
+		  <h3>Ein Übungsmanöver mit 749 Toten?</h3>
+		  <p>History Reloaded Dass die harmlose «Operation Tiger» bei Slapton Sands blutig endete, blieb lange geheim – bis ein Hobbyforscher Spuren fand. Zum Blog</p>
+		</div>
+	  </article>
+	  <article>
+		<div> <img src="img/05.jpg" alt="Peter Frankopan"> </div>
+		<div>
+		  <h3>Wenn Eselshäute knapp werden</h3>
+		  <p>Oxford-Professor Peter Frankopan beurteilt die Folgen der chinesischen Seidenstrassen-Initiative für die Machtverhältnisse in der Welt. Der Westen, meint er, hat keine Strategie. Mehr…</p>
+		</div>
+	  </article>
+	  <article>
+		<div> <img src="img/06.jpg" alt="Widmerzeile"> </div>
+		<div>
+		  <h3>Was sagt die Biene zum Honig?</h3>
+		  <p>Die neue Widmerzeile ist da. Legen Sie der Biene etwas Süsses in den Mund! Mehr…</p>
+		</div>
+	  </article>
+	  <article>
+		<div> <img src="img/07.jpg" alt="Anna Todd"> </div>
+		<div>
+		  <h3>Liebe Studentin, schlimmer Finger</h3>
+		  <p>Anna Todd schreibt, was Millionen lesen wollen: Erotik, klare Rollen. Nun ist ihre Tessa-Story im Schweizer Kino. Mehr…</p>
+		</div>
+	  </article>
+	  <article>
+		<div> <img src="img/08.jpg" alt="Hollywood"> </div>
+		<div>
+		  <h3>Aufstand in Hollywood</h3>
+		  <p>Zwischen Drehbuchautoren und den vier grossen Künstleragenturen tobt eine Schlacht. Studios fürchten um ihre Produktionen. Mehr…</p>
+		</div>
+	  </article>
+	  <article>
+		<div> <img src="img/09.jpg" alt="Rod Steward"> </div>
+		<div>
+		  <h3>«Ich schulde der schwarzen Kultur etwas»</h3>
+		  <p>Haare, Sex, Drogenexzesse: Er bereut nichts. Rod Stewart will singen, bis er ins Grab fällt. Mehr…</p>
+		</div>
+	  </article>
+	  <article>
+		<div> <img src="img/10.jpg" alt="Schweizer Filme"> </div>
+		<div>
+		  <h3>Produzenten fordern 20-Prozent-Quote für Schweizer Filme</h3>
+		  <p>Auch Schweizer Produzenten wollen vom Streamingboom profitieren und für Netflix und andere Anbieter Stoffe entwickeln. Mehr…</p>
+		</div>
+	  </article>
+	  <article>
+		<div> <img src="img/11.jpg" alt="Linda Vogel"> </div>
+		<div>
+		  <h3>Abseits des Märchenwaldes</h3>
+		  <p>Die Harfenistin und Sängerin Linda Vogel veröffentlicht ihr einnehmendes Debütalbum «Maps to Others», auf dem die Zürcherin neue Klänge in ihrem Instrument findet. Mehr…</p>
+		</div>
+	  </article>
+	  <article>
+		<div> <img src="img/12.jpg" alt="Klimawelle"> </div>
+		<div>
+		  <h3>«Klima und Frauen, darum gehts jetzt»</h3>
+		  <p>Die Grünen surfen auf der Klimawelle. Jetzt müsse die Partei alte Fehler vermeiden, sagt Jo Lang, einer der bekanntesten Grünen im Land. Mehr…</p>
+		</div>
+	  </article>
+	  <article>
+		<div> <img src="img/13.jpg" alt="Salvator Mundi"> </div>
+		<div>
+		  <h3>Für 450 Millionen Dollar ersteigert – und seither verschwunden</h3>
+		  <p>Da Vincis «Salvator Mundi» ist das teuerste Gemälde der Welt. Doch wo ist es? Die mysteriöse Spur führt zu einem Prinzen. Und vielleicht bald nach Paris. Mehr…</p>
+		</div>
+	  </article>
+	</section>
+    <!-- #9: Firebase initialisieren -->
+
+		 <script type="module">
+
+			// Import the functions you need from the SDKs you need
+
+			// TODO: Add SDKs for Firebase products that you want to use
+			// https://firebase.google.com/docs/web/setup#available-libraries
+
+			import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+			import { getMessaging, getToken, onMessage } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-messaging.js";
+
+			// Your web app's Firebase configuration
+			const firebaseConfig = {
+				apiKey: "HIER EIGENE BENUTZERDATEN EINFUEGEN",
+				authDomain: "HIER EIGENE BENUTZERDATEN EINFUEGEN",
+				projectId: "HIER EIGENE BENUTZERDATEN EINFUEGEN",
+				storageBucket: "HIER EIGENE BENUTZERDATEN EINFUEGEN",
+				messagingSenderId: "HIER EIGENE BENUTZERDATEN EINFUEGEN",
+				appId: "HIER EIGENE BENUTZERDATEN EINFUEGEN"
+			};
+
+			// Initialize Firebase
+			const app = initializeApp(firebaseConfig);
+			const messaging = getMessaging();
+
+			// Get registration token. Initially this makes a network call, once retrieved
+			// subsequent calls to getToken will return from cache.
+
+			getToken(messaging, { vapidKey: 'HIER EIGENE BENUTZERDATEN EINFUEGEN' }).then((currentToken) => {
+			  if (currentToken) {
+			    // Send the token to your server and update the UI if necessary
+
+				let html = document.querySelector("html");
+				let tokenContainer = document.createElement("div");
+				tokenContainer.innerHTML = currentToken;
+				html.appendChild(tokenContainer);
+
+			  console.log(currentToken);
+			  } else {
+			    // Show permission request UI
+			    console.log('No registration token available. Request permission to generate one.');
+			    // ...
+			  }
+			}).catch((err) => {
+			  console.log('An error occurred while retrieving token. ', err);
+			  // ...
+			});
+
+			let enableForegroundNotification = true;
+			onMessage(function (payload) {
+				console.log('Message received. ', payload);
+				NotisElem.innerHTML = NotisElem.innerHTML + JSON.stringify(payload);
+				if (enableForegroundNotification) {
+					let notification = payload.notification;
+					navigator.serviceWorker .getRegistrations()
+					.then((registration) => { registration[0].showNotification(notification.title);
+				});
+			}
+		});
+
+		</script>
+
+
+    <!-- Ende #9: Firebase initialisieren -->
+
+    <!-- #8: Push-Skript: Notification -->
+
+		<script>
+			MsgElem = document.getElementById("msg");
+			TokenElem = document.getElementById("token");
+			NotisElem = document.getElementById("notis");
+			ErrElem = document.getElementById("err");
+		</script>
+
+    <!-- Ende #8: Push-Skript: Notification -->
+
+    <!-- #10: Requesting Permission -->
+
+    <!-- Ende #10: Requesting Permission -->
+</body>
+</html>
