@@ -1,5 +1,5 @@
 # Progressive Web-Apps
-Repository für den Progressive WebApp Code im Grundast der Interaktiven Medien. 
+Repository für den Progressive Web-App Code im Grundast der Interaktiven Medien. 
 Progressive Web-Apps (PWA) sind normale Websites basierend auf HTML, CSS, Javascript, MySQL und PHP. Die Websites sind angereichert durch die Möglichkeit, dass sie auf dem Smartphone (oder Desktop) installiert werden können. Dabei werden die Inhalte (wie Bilder, Stylesheet etc.) auch lokal gespeichert. Das heisst, die PWA können auch offline (d.h. ohne Internetverbindung) genutzt werden.
 ## Zentrale Komponenten
 - Um Progressive Web-Apps auf einem Endgerät zu installieren wird eine manifest.json-Datei benötigt, die im head-Bereich der Startseite der PWA verlinkt sein muss. Die Manifest-Datei enthält alle Informationen über die App, die benötigt werden, um die PWA erfolgreich zu installieren. Dazu gehören Name, App-Icons und der Pfad zur Startdatei der PWA.
